@@ -1,0 +1,124 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --clr-primary: #f70058;
+  --clr-dark: #0c0e36;
+  --clr-light: #fff;
+  --fw-normal: 400;
+  --fw-bold: 700;
+  --fw-black: 900;
+  --ff: "Work Sans", sans-serif;
+}
+
+body {
+  font-family: var(--ff);
+  color: var(--clr-dark);
+  line-height: 1.6;
+  background-color: var(--clr-light);
+  height: 100vh;
+  overflow: hidden;
+}
+
+header {
+  margin: 0px 0px 0px 15%;
+  background-color: var(--clr-light);
+  display: grid;
+  grid-template-columns: min-content auto min-content;
+}
+
+.logo {
+  grid-row: span 2;
+  margin: auto 30px auto 0;
+}
+
+.nav__list {
+  height: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  font-weight: var(--fw-bold);
+  letter-spacing: 1px;
+  gap: 50px;
+  grid-row: span 2;
+  margin-right: 50px;
+}
+
+.nav__list-item {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav__list-item:hover {
+  border-bottom: 2px solid var(--clr-dark);
+  padding-bottom: 2px;
+}
+
+.weather {
+  background-color: var(--clr-dark);
+  display: grid;
+  grid-template-columns: min-content 1fr;
+}
+
+.weather__icon {
+  grid-row: span 2;
+  background-color: var(--clr-primary);
+  padding: 5px;
+}
+
+.weather__info {
+  background-color: var(--clr-dark);
+  color: rgb(255, 255, 255, 0.5);
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+  font-size: 0.875rem;
+}
+
+.weather__info span {
+  color: var(--clr-light);
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.main {
+  height: 100%;
+  width: 100%;
+}
+
+.main__bg {
+  position: relative;
+  z-index: -1;
+}
+
+.main__bg img {
+  position: absolute;
+  top: -100px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.main__content {
+  margin-left: 15%;
+  margin-top: 100px;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.main__title {
+  font-weight: 900;
+  font-size: 56px;
+}
